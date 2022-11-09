@@ -1,0 +1,39 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #7347c4;
+}
+
+.quiz
+{
+    text-align: center;
+}
+button
+{
+margin-top: 25px;
+}
+h4
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.delete
+{
+display: block;
+margin: auto;
+}
+*
+{
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.main
+{
+    margin-left: 70px;
+    margin-right: 70px; 
+}
