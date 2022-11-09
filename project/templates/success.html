@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Success
+{% endblock %}
+
+{% block main %}
+  <h4>Your score is {{ total_count }}! {{ result }}</h4>
+  <h5>Check your journal for the entry</h5>
+  <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+{% endblock %}

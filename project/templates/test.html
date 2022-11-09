@@ -1,0 +1,572 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Take Burns Depression Checklist
+{% endblock %}
+
+{% block main %}
+    <h4>Thoughts and feelings</h4>
+  <form action="/test" method="post" id="total_count">
+    <ol>
+
+    <li class="quiz">Feeling sad or down in the dumps</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions0" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions0" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions0" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions0" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions0" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Feeling unhappy or blue</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions1" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Crying spells or tearfulness</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions2" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Feeling discouraged</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions3" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Feeling hopeless</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions4" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Low self-esteem</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions5" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Feeling worthless or inadequate</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions6" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Guilt or shame</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions7" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Critisizing yourself or blaming yourself</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions8" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Difficulty making decisions</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions9" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+      <!--Activities-->
+      <h4>Activities and Personal Relationships</h4>
+      <li class="quiz">Loss of interest in family, friends or colleagues</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions10" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Feeling Lonely</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions11" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions11" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Spending less time with family or friends</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions12" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions12" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Loss of motivation</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions13" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions13" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Loss of interest in work or other activities</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions14" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions14" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Avoiding work or other activities</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions15" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions15" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions15" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions15" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions15" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Loss of pleasure of satisfaction in life</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions16" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions16" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions16" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions16" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions16" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+      <!--physical-->
+      <h4>Physical symptoms</h4>
+      <li class="quiz">Feeling tired</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions17" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions17" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Difficulty sleeping or sleeping too much</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions18" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions18" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions18" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions18" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions18" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Decreased or increased appetite</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions19" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions19" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions19" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions19" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions19" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Loss of interest in sex</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions20" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions20" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions20" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions20" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions20" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Worrying about your health</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions21" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions21" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions21" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions21" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions21" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+      <h4>Suicidal thoughts</h4>
+      <li class="quiz">Do you have any suicidal thoughts?</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions22" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions22" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions22" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions22" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions22" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+      <li class="quiz">Would you like to end your life?</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions23" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions23" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions23" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions23" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions23" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+
+      <li class="quiz">Do you have a plan of harming yourself?</li>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" checked name="inlineRadioOptions24" id="inlineRadio0" value="0">
+        <label class="form-check-label" for="inlineRadio0">0 - Not at all</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions24" id="inlineRadio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">1 - Somewhat</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions24" id="inlineRadio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">2 - Moderately</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions24" id="inlineRadio3" value="3">
+        <label class="form-check-label" for="inlineRadio3">3 - A lot</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions24" id="inlineRadio4" value="4">
+        <label class="form-check-label" for="inlineRadio4">4 - Extremely</label>
+      </div>
+
+
+
+      <h3><button class="btn btn-primary" type="submit">Submit test</button></h3>
+  </form>
+
+
+
+{% endblock %}

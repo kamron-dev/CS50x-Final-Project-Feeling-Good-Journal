@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Journal 
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th hidden>test_id</th>
+            <th>Score</th>
+            <th>Date and time</th>
+            
+        </tr>
+
+    </thead>
+    <tbody>
+        {% for journal in journal %}
+        <tr>
+            <td hidden>{{ journal["test_id"] }}</td>
+            <td>{{ journal["score"] }}</td>
+            <td>{{ journal["date"] }}</td>
+            <td><form action="/journal" method="post"><button type="submit" name="delete" value="{{ journal["test_id"] }}" class="btn btn-outline-danger btn-sm delete">Delete</button></form></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
